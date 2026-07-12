@@ -16,7 +16,7 @@ void count(const string &s)
         }
     }
     
-    // Displays non-zero count
+    // Displays non-zero count for all character in alphapebt used in the users string
     for (int i = 0; i < 26; i++)
     {
         if (letters[i] > 0)
@@ -28,6 +28,7 @@ void count(const string &s)
 }
 int main()
 {
+    //Prompts User for the string
     string str;
     cout << "Enter a string: ";
     getline(cin, str);
