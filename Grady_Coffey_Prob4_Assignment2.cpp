@@ -2,9 +2,10 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-
+//Int used for rolls
 int rollDice()
 {
+    //Establishes six sided die
     int die1 = rand() % 6 + 1;
     int die2 = rand() % 6 + 1;
     int sum = die1 + die2;
@@ -25,6 +26,7 @@ int main()
     {
         cout << "You win" << endl;
     }
+    //Establishes starting losing condition    
     else if (sum == 2 || sum == 3 || sum == 12)
     {
         cout << "You lose" << endl;
@@ -38,12 +40,13 @@ int main()
         while (true)
         {
             sum = rollDice();
-
+            //Win condition
             if (sum == point)
             {
                 cout << "You win" << endl;
                 break;
             }
+            //Lose condition if 7 out    
             else if (sum == 7)
             {
                 cout << "You lose" << endl;
